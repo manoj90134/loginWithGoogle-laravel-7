@@ -81,8 +81,10 @@ protected $fillable = [
         'name', 'email', 'password', 'google_id'
     
     ];
+    
 
 routes/web.php
+
 
 Auth::routes();
 
@@ -92,13 +94,17 @@ Route::get('auth/google', 'Auth\GoogleController@redirectToGoogle');
 
 Route::get('auth/google/callback', 'Auth\GoogleController@handleGoogleCallback');
 
+
+
+
 Step 6: Create Controller
 
-terminal code: 
 
-php artisan make:controller auth/GoogleController
+Terminal code:  php artisan make:controller auth/GoogleController
+
 
 <?php
+
 namespace App\Http\Controllers\Auth;
   
 use App\Http\Controllers\Controller;
@@ -159,8 +165,13 @@ class GoogleController extends Controller
         }
         
     }
+
 }
 
+?>
+
+
+=========================================================================================
 
 Step 7: Update Blade File
 
